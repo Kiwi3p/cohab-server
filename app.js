@@ -48,7 +48,7 @@ app.use(cookieParser());
 //   })
 // );
 
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, "dist")));
 
 // app.set("views", path.join(__dirname, "views"));
 // app.set("view engine", "hbs");
@@ -74,20 +74,18 @@ app.locals.title = "Express - Generated with IronGenerator";
 app.use(
   cors({
     credentials: true,
-    origin: [process.env.CLIENT_HOSTNAME],
+    origin: [process.env.CLIENT_HOSTNAME, "http://localhost:3000"],
   })
 );
 
 const index = require("./routes/index");
 app.use("/", index);
 
+const houseRoutes = require("./routes/house-routes");
+app.use("/api", houseRoutes);
 
-const houseRoutes = require('./routes/house-routes');
-app.use('/api', houseRoutes)
-
-const taskRoutes = require('./routes/task-routes');
-app.use('/api', taskRoutes)
-
+const taskRoutes = require("./routes/task-routes");
+app.use("/api", taskRoutes);
 
 const authRoutes = require("./routes/auth-routes");
 app.use("/api", authRoutes);
