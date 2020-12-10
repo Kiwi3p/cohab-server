@@ -1,18 +1,19 @@
-const express = require('express');
-const router  = express.Router();
+const express = require("express");
+const router = express.Router();
+const path = require("path");
 
 /* GET home page */
-router.get('/', (req, res, next) => {
-  res.json({message:'index'});
+router.get("/", (req, res, next) => {
+  res.json({ message: "index" });
 });
 
-router.all("*", (req,res,next) =>{
-  if (req.originalUrl.startsWith('/api')) {
-      // skip any /api routes
-      next();
+router.all("*", (req, res, next) => {
+  if (req.originalUrl.startsWith("/api")) {
+    // skip any /api routes
+    next();
   } else {
-    res.sendFile(path.join(__dirname, '../dist/index.html'));
+    res.sendFile(path.join(__dirname, "../dist/index.html"));
   }
-})
+});
 
 module.exports = router;
