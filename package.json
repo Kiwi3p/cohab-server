@@ -21,7 +21,8 @@
     "passport": "^0.4.1",
     "passport-google-oauth20": "^2.0.0",
     "passport-local": "^1.0.0",
-    "serve-favicon": "^2.5.0"
+    "serve-favicon": "^2.5.0",
+    "yelp-fusion": "^3.0.0"
   },
   "devDependencies": {
     "nodemon": "^1.12.1"
