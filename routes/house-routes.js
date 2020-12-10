@@ -1,7 +1,7 @@
-const { response } = require("express");
+//const { response } = require("express");
 const express = require("express");
 const router = express.Router();
-const mongoose = require("mongoose");
+//const mongoose = require("mongoose");
 const House = require("../models/house-model");
 const User = require("../models/user-model");
 
