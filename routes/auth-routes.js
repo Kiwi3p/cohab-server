@@ -2,8 +2,8 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
 const passport = require("passport");
-const User = require("../models/user-model.js");
-const House = require("../models/house-model.js");
+const User = require("../models/user-model");
+//const House = require("../models/house-model");
 
 router.post("/signup", (req, res) => {
   const username = req.body.username;
