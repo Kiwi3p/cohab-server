@@ -6,7 +6,7 @@ const path = require("path");
 // Place holder for Yelp Fusion's API Key. Grab them
 // from https://www.yelp.com/developers/v3/manage_app
 const apiKey =
-  "WgRag4zBmo7OTNmEPv_H4JsjK1OhtfSYeCIG99_4-xK7R0Ref9OP0RlVWb_5GssPYF9KucWPXl70qYDIzIGruWthGl3ZgcC9YuxBYOg8T21PmTk6kzRKSTf2InKtX3Yx";
+`${process.env.YELP_API}`;
 
 //const app = express();
 
